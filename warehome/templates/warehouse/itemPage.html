@@ -27,7 +27,12 @@
         <hr color="white">
         <hr color="blue">
         <hr color="red">
+        <form method="post" action="/warehouse/itemPage/{{ itemData.id }}/">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-large btn-danger" value="Удалить предмет">
+        </form>
         <br>
+        <hr color="red">
     </div>
 </div>
 </body>

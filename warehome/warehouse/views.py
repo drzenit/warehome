@@ -28,6 +28,12 @@ def index(request):
     return render(request, 'warehouse/mainPage.html', context)
 
 def itemView(request, pk):
+    if request.method == 'POST':
+        itemData = models.Item.objects.get(id=pk)
+        itemData.delete()
+
+        return redirect('index')
+
     itemData = models.Item.objects.get(id = pk)
 
     context = {
