@@ -41,3 +41,12 @@ def itemView(request, pk):
     }
 
     return render(request, 'warehouse/itemPage.html', context)
+
+def qrCodeList(request):
+    dbData = list(models.Item.objects.all())
+
+    context = {
+        'wareData': dbData,
+    }
+
+    return render(request, 'warehouse/qrCodesPage.html', context)
