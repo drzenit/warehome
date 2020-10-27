@@ -7,4 +7,8 @@ def generateQRcode(id):
     path = 'C:\\Users\\uzer\PycharmProjects\warehome\warehome\static\images\qrcodes\\'
     image.save(path + filename)
 
-    return path
+    relativePath = (path + filename).split('\\')
+
+    return ('/' + relativePath[6] + '/' + relativePath[7] + '/' + relativePath[8] + '/' + relativePath[9])
+
+print(generateQRcode(2))

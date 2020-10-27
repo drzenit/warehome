@@ -128,8 +128,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = "C:\\Users\\uzer\PycharmProjects\warehome\warehome\static"
+#STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
-MEDIA_URL = '/images/'
+STATICFILES_DIRS=(
+   os.path.join(BASE_DIR, 'static'),
+)
 
-MEDIA_ROOT = "C:\\Users\\uzer\PycharmProjects\warehome\warehome\static\images\\"
+
+#MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+#MEDIA_URL = '/media/'
+
+#MEDIAFILES_DIRS=(
+#   os.path.join(BASE_DIR, 'media'),
+#)
